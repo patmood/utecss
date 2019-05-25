@@ -8,14 +8,99 @@
     <link rel="stylesheet" href="ute.css" />
   </head>
   <body>
-    <header>
+    <header class="text-center bg-light-gray p-3">
       <h1>Ute CSS</h1>
       <p>A minimal CSS utility library</p>
     </header>
-    <main>
-      <nav>Nav here</nav>
+    <main class="page-width mx-auto p-3">
+      <nav class="border rounded border-gray sticky p-2">Nav here</nav>
+      <h2>Philosophy</h2>
+      <p>
+        Simple, single file CSS that can be easily understood and used without
+        build tools.
+      </p>
+      <p>
+        When your project gets more serious, add a build step for better browser
+        support and compression.
+      </p>
       <h2>How to use</h2>
-      <p>Boop</p>
+      <p>
+        When starting out, it can be daunting to remember all the class names.
+        The best way to reference names is to search <code>ute.css</code> for
+        the style that you would write, if you were creating your own class.
+      </p>
+      <p>
+        Use the examples on this page to see how the classes work together to
+        achieve common UI components.
+      </p>
+
+      <h2>Examples</h2>
+      <h3>Buttons</h3>
+      <div class="example">
+        <button
+          class="border-none rounded text-base px-2 py-1 bg-blue white cursor-pointer"
+        >
+          Button
+        </button>
+
+        <button
+          class="border rounded text-base px-2 py-1 bg-transparent cursor-pointer"
+        >
+          Border Button
+        </button>
+
+        <button
+          class="border rounded text-sm px-2 py-1 bg-transparent cursor-pointer"
+        >
+          Small Button
+        </button>
+
+        <button
+          class="border rounded text-lg px-2 py-1 bg-transparent cursor-pointer"
+        >
+          Large Button
+        </button>
+      </div>
+
+      <h3>Card</h3>
+      <div class="example">
+        <div class="border rounded shadow p-2">
+          <h1 class="bold">Header</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Voluptatibus quia, nulla! Maiores et perferendis eaque,
+            exercitationem praesentium nihil.
+          </p>
+        </div>
+      </div>
     </main>
+    <footer class="p-3 bg-black white">
+      Ute CSS
+    </footer>
+    <style></style>
+    <script>
+      // Load example code snippets
+      const examples = document.querySelectorAll('.example')
+      examples.forEach(example => {
+        const codeBlock = document.createElement('pre')
+        let lines = example.innerHTML.split('\n')
+        // Remove blank trailing lines
+        if (!lines[0]) {
+          lines = lines.slice(1)
+        }
+        if (!lines[lines.length - 1]) {
+          lines.pop()
+        }
+
+        const indentation = lines[0].match(/^\s+/)[0].length
+        lines = lines.map(l => l.substring(indentation))
+
+        console.log({ indentation })
+        codeBlock.textContent = lines.join('\n')
+        codeBlock.className =
+          'border-none bg-light-gray rounded block w-full mt-2 mx-0 p-2 overflow-x-scroll'
+        example.appendChild(codeBlock)
+      })
+    </script>
   </body>
 </html>
