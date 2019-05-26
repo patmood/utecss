@@ -8,7 +8,36 @@
     <link rel="stylesheet" href="ute.css" />
   </head>
   <body>
-    <header class="text-center bg-light-gray p-3">
+    <header class="text-center bg-lightgray p-3">
+      <svg
+        width="216"
+        height="114"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M132.5 29v5.5h78V75a8.5 8.5 0 0 1-8.5 8.5H14A8.5 8.5 0 0 1 5.5 75V60.695c0-10.251 7.573-18.927 17.73-20.312l41.194-5.617a11.5 11.5 0 0 0 7.306-4.063L90.038 8.581A8.5 8.5 0 0 1 96.586 5.5H124a8.5 8.5 0 0 1 8.5 8.5v15z"
+          fill="#fff"
+          stroke="#000"
+          stroke-width="11"
+        />
+        <circle
+          cx="49.5"
+          cy="86.5"
+          r="22"
+          fill="#fff"
+          stroke="#000"
+          stroke-width="11"
+        />
+        <circle
+          cx="166.5"
+          cy="86.5"
+          r="22"
+          fill="#fff"
+          stroke="#000"
+          stroke-width="11"
+        />
+      </svg>
       <h1>Ute CSS</h1>
       <p>A minimal CSS utility library without a build step</p>
     </header>
@@ -21,7 +50,7 @@
       </p>
       <p>Or, directly link to the hosted stylesheet:</p>
       <pre
-        class="border-none bg-light-gray rounded block w-full mt-2 mx-0 p-2 overflow-x-scroll"
+        class="border-none bg-lightgray rounded block w-full mt-2 mx-0 p-2 overflow-x-scroll"
       >
 &lt;link href=&quot;https://patmood.github.io/utecss/ute.css&quot; rel=&quot;stylesheet&quot;&gt;</pre
       >
@@ -53,6 +82,78 @@
       </p>
 
       <h2>Examples</h2>
+      <h3>Spacing</h3>
+      <div class="flex items-center content-around text-center flex-wrap">
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-1"></span>
+          <div class="mt-2">1</div>
+        </div>
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-2"></span>
+          <div class="mt-2">2</div>
+        </div>
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-3"></span>
+          <div class="mt-2">3</div>
+        </div>
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-4"></span>
+          <div class="mt-2">4</div>
+        </div>
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-5"></span>
+          <div class="mt-2">5</div>
+        </div>
+        <div class="m-2">
+          <span class="border-right border-bottom border-left pr-6"></span>
+          <div class="mt-2">6</div>
+        </div>
+      </div>
+
+      <h3>Colors</h3>
+      <div class="flex flex-wrap mb-3">
+        <div class="flex-grow p-4 bg-black white"><code>.bg-black</code></div>
+        <div class="flex-grow p-4 bg-white"><code>.bg-white</code></div>
+        <div class="flex-grow p-4 bg-lightgray">
+          <code>.bg-lightgray</code>
+        </div>
+        <div class="flex-grow p-4 bg-gray"><code>.bg-gray</code></div>
+        <div class="flex-grow p-4 bg-blue"><code>.bg-blue</code></div>
+        <div class="flex-grow p-4 bg-red"><code>.bg-red</code></div>
+        <div class="flex-grow p-4 bg-orange"><code>.bg-orange</code></div>
+        <div class="flex-grow p-4 bg-green"><code>.bg-green</code></div>
+        <div class="flex-grow p-4 bg-yellow"><code>.bg-yellow</code></div>
+      </div>
+
+      <div class="flex flex-wrap content-center mb-3">
+        <code class="m-2 black">.black</code>
+        <code class="m-2 white bg-gray">.white</code>
+        <code class="m-2 lightgray">.lightgray</code>
+        <code class="m-2 gray">.gray</code>
+        <code class="m-2 blue">.blue</code>
+        <code class="m-2 red">.red</code>
+        <code class="m-2 orange">.orange</code>
+        <code class="m-2 green">.green</code>
+        <code class="m-2 yellow">.yellow</code>
+      </div>
+
+      <div class="flex flex-wrap content-center mb-3">
+        <code class="m-2 px-2 py-1 border border-black">.border-black</code>
+        <code class="m-2 px-2 py-1 border border-white bg-gray"
+          >.border-white</code
+        >
+        <code class="m-2 px-2 py-1 border border-lightgray"
+          >.border-lightgray</code
+        >
+        <code class="m-2 px-2 py-1 border border-gray">.border-gray</code>
+        <code class="m-2 px-2 py-1 border border-blue">.border-blue</code>
+        <code class="m-2 px-2 py-1 border border-red">.border-red</code>
+        <code class="m-2 px-2 py-1 border border-orange">.border-orange</code>
+        <code class="m-2 px-2 py-1 border border-green">.border-green</code>
+        <code class="m-2 px-2 py-1 border border-yellow">.border-yellow</code>
+      </div>
+
+      <h2>Components</h2>
       <h3>Buttons</h3>
       <div class="example">
         <button
@@ -68,7 +169,7 @@
         </button>
 
         <button
-          class="border rounded text-sm px-2 py-1 bg-transparent cursor-pointer"
+          class="border rounded text-sm px-1 py-1 bg-transparent cursor-pointer"
         >
           Small Button
         </button>
@@ -95,29 +196,46 @@
     <footer class="p-3 bg-black white">
       Ute CSS
     </footer>
-    <style></style>
+    <style>
+      .code-toggle:checked ~ pre {
+        display: block;
+      }
+    </style>
     <script>
       // Load example code snippets
-      const examples = document.querySelectorAll('.example')
-      examples.forEach(example => {
-        const codeBlock = document.createElement('pre')
+      var examples = document.querySelectorAll('.example')
+      examples.forEach(function(example, index) {
+        var div = document.createElement('div')
+
+        // Show code toggle
+        var inputId = 'showCode-' + index
+        var checkbox = document.createElement('input')
+        checkbox.id = inputId
+        checkbox.type = 'checkbox'
+        checkbox.className = 'code-toggle mt-2 mr-1'
+        div.appendChild(checkbox)
+        var label = document.createElement('label')
+        label.textContent = 'Show code'
+        label.htmlFor = inputId
+        div.appendChild(label)
+
+        // Get the example HTML
+        var codeBlock = document.createElement('pre')
         let lines = example.innerHTML.split('\n')
-        // Remove blank trailing lines
         if (!lines[0]) {
           lines = lines.slice(1)
         }
         if (!lines[lines.length - 1]) {
           lines.pop()
         }
-
-        const indentation = lines[0].match(/^\s+/)[0].length
+        var indentation = lines[0].match(/^\s+/)[0].length
         lines = lines.map(l => l.substring(indentation))
-
-        console.log({ indentation })
         codeBlock.textContent = lines.join('\n')
         codeBlock.className =
-          'border-none bg-light-gray rounded block w-full mt-2 mx-0 p-2 overflow-x-scroll'
-        example.appendChild(codeBlock)
+          'border-none bg-lightgray rounded block w-full mt-2 mx-0 p-2 overflow-x-scroll hidden'
+        div.appendChild(codeBlock)
+
+        example.appendChild(div)
       })
     </script>
   </body>
