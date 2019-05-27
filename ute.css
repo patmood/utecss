@@ -68,6 +68,47 @@ img { max-width: 100%; }
 .border-yellow { border-color: var(--yellow); }
 
 
+/* ======= TYPOGRAPHY ======= */
+:root {
+  --bold-font-weight: bold;
+}
+.text-sm { font-size: .6rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+
+.font-family-inherit { font-family: inherit }
+.font-size-inherit { font-size: inherit }
+.text-decoration-none { text-decoration: none }
+
+.bold    { font-weight: var(--bold-font-weight, bold) }
+.regular { font-weight: normal }
+.italic  { font-style: italic }
+.caps    { text-transform: uppercase; letter-spacing: 0.2em; }
+
+.text-left   { text-align: left }
+.text-center       { text-align: center }
+.text-right  { text-align: right }
+.text-justify      { text-align: justify }
+
+.nowrap { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+.list-style-none { list-style: none }
+.underline { text-decoration: underline }
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0;
+}
+
+
 /* ======= SPACING ======= */
 :root {
   --space-1: 0.25rem;
@@ -226,47 +267,6 @@ img { max-width: 100%; }
 .rounded-bottom { border-radius: 0 0 var(--border-radius) var(--border-radius) }
 .rounded-left { border-radius: var(--border-radius) 0 0 var(--border-radius) }
 .circle  { border-radius: 50% }
-
-
-/* ======= TYPOGRAPHY ======= */
-:root {
-  --bold-font-weight: bold;
-}
-.text-sm { font-size: .6rem; }
-.text-base { font-size: 1rem; }
-.text-lg { font-size: 1.125rem; }
-
-.font-family-inherit { font-family: inherit }
-.font-size-inherit { font-size: inherit }
-.text-decoration-none { text-decoration: none }
-
-.bold    { font-weight: var(--bold-font-weight, bold) }
-.regular { font-weight: normal }
-.italic  { font-style: italic }
-.caps    { text-transform: uppercase; letter-spacing: 0.2em; }
-
-.text-left   { text-align: left }
-.text-center       { text-align: center }
-.text-right  { text-align: right }
-.text-justify      { text-align: justify }
-
-.nowrap { white-space: nowrap }
-.break-word { word-wrap: break-word }
-
-.list-style-none { list-style: none }
-.underline { text-decoration: underline }
-
-.truncate {
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.list-reset {
-  list-style: none;
-  padding-left: 0;
-}
 
 
 /* ======= FLEXBOX ======= */
